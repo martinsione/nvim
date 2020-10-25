@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'             " Better Comments
     Plug 'justinmk/vim-sneak'               " Move between lines faster
     Plug 'norcalli/nvim-colorizer.lua'      " Color for those hex
+    Plug 'airblade/vim-gitgutter'           " GIT integration
     Plug 'tpope/vim-surround'
     Plug 'luochen1990/rainbow'              " Rainbow brackets
     Plug 'ryanoasis/vim-devicons'           " Cool Icons
