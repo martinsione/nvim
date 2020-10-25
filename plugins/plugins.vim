@@ -26,7 +26,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'psliwka/vim-smoothie'             " Smooth scroll
     Plug 'AndrewRadev/tagalong.vim'         " HTML |Auto change tags
     Plug 'alvan/vim-closetag'               " HTML | Closetags
-
     " Plug 'jiangmiao/auto-pairs'             " Auto pairs for '(' '[' '{'
 
 call plug#end()

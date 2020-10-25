@@ -14,7 +14,6 @@ source $HOME/.config/nvim/general/keymaps.vim               " nvim keybinds
 source $HOME/.config/nvim/plugins/plugins.vim               " Call the plugins
 source $HOME/.config/nvim/plugins/config/closetags.vim      " Call closetags
 source $HOME/.config/nvim/plugins/config/coc.vim            " Call Coc
-source $HOME/.config/nvim/plugins/config/highlightyank.vim  " Call closetags
 source $HOME/.config/nvim/plugins/config/rainbow.vim        " Call closetags
 source $HOME/.config/nvim/plugins/config/sneak.vim          " Call closetags
 

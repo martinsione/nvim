@@ -9,16 +9,13 @@
     "json",
     "python"
   ],
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   // explorer
   "explorer.width": 35,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false, // files data preview
+  "explorer.previewAction.onHover": false,
+  "explorer.icon.enableVimDevicons": false,
   "explorer.keyMappings": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   }
-  //// python config
-  // "python.linting.enabled": true,
-  // "python.linting.pylintEnabled": true,
 }
