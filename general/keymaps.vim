@@ -1,40 +1,28 @@
 " Remap Esc key
-" Use control-c instead of escape
 " nnoremap <silent> <C-c> <Esc>
-" inoremap jk <Esc>
+" inoremap ii <Esc>
 
 " Leader key
 let mapleader='\<Space>'
-
-" Basic Key Mappings
-imap <C-h> <C-w>h
-imap <C-j> <C-w>j 
-imap <C-k> <C-w>k 
-imap <C-l> <C-w>l
 
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
 " Clear search higlighting
-nnoremap s :noh<CR>
+noremap s :noh<CR>
 
-" TAB in general mode will move to text buffer
+" TAB in normal mode will move to next buffer SHIFT-TAB will go back
 nnoremap <silent> <TAB> :bnext<CR>
-" SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
-" Move selected line / shift + k to move up shift + j to move down
+" Move selected line/block of code | K move up / J move down
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-" Alternate way to save
+" Save with Ctrl + S
 nnoremap <silent> <C-s> :w<CR>
-" Close a buffer
+" Close a buffer with Ctrl + Q
 nnoremap <silent> <C-Q> :bd<CR>
 " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -44,6 +32,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
 " Use alt + hjkl to resize windows
 nnoremap <silent> <M-j>    :resize -2<CR>
 nnoremap <silent> <M-k>    :resize +2<CR>
@@ -60,7 +49,3 @@ inoremap <C-j> <C-\><C-N><C-w>j
 inoremap <C-k> <C-\><C-N><C-w>k
 inoremap <C-l> <C-\><C-N><C-w>l
 tnoremap <Esc> <C-\><C-n>
-
-" Emmet mappings
-" imap ;; <C-y>,
-
