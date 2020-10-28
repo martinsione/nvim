@@ -1,25 +1,18 @@
   let g:coc_global_extensions = [
     \ 'coc-css',
-    \ 'coc-cssmodules',
     \ 'coc-emmet',
-    \ 'coc-emoji',
     \ 'coc-explorer',
-    \ 'coc-html',
     \ 'coc-json',
+    \ 'coc-html',
     \ 'coc-marketplace',
     \ 'coc-pairs',
     \ 'coc-prettier',
-    \ 'coc-svg',
     \ 'coc-sh',
+    \ 'coc-tabnine',
     \ 'coc-tsserver',
     \ 'coc-vimlsp',
-    \ 'coc-xml',
     \ 'coc-yank',
     \ ]
-
-
-  "   " \ 'coc-tabnine',
-  "   " \ 'coc-highlight',
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
@@ -150,28 +143,22 @@ let g:coc_explorer_global_presets = {
 \     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
 \   }
 \ }
-"nmap <silent> <space>e :CocCommand explorer<CR>
-" nnoremap <silent> <leader>e :CocCommand explorer<CR>
-" nmap <space>f :CocCommand explorer --preset floatingRightside<CR>
+nnoremap <space>e :CocCommand explorer<CR>
+" nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-" Snippets
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
+" " Snippets
+" " Use <C-l> for trigger snippet expand.
+" imap <C-l> <Plug>(coc-snippets-expand)
 
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
+" " Use <C-j> for select text for visual placeholder of snippet.
+" vmap <C-j> <Plug>(coc-snippets-select)
 
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
+" " Use <C-j> for jump to next placeholder, it's default of coc.nvim
+" let g:coc_snippet_next = '<c-j>'
 
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
+" " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+" let g:coc_snippet_prev = '<c-k>'
 
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-
-"""""""""""""""""""""""""""""""" My settings """""""""""""""""""""""""""""""""
-" Explorer
-nmap <space>e :CocCommand explorer<CR>
-" nmap <space>f :CocCommand explorer --preset floating<CR>
+" " Use <C-j> for both expand and jump (make expand higher priority.)
+" imap <C-j> <Plug>(coc-snippets-expand-jump)
