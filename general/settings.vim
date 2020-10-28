@@ -1,54 +1,49 @@
 " General
-syntax enable                           " Enables syntax highlighing
-set mouse=a                             " Enable your mouse
-set formatoptions-=cro                  " Stop newline continution of comments
-set cmdheight=2                         " More space for displaying messages
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set conceallevel=0                      " So that I can see `` in markdown files
+syntax enable                           " Enable syntax highlighing
+set autoindent                          " Good auto indent
+set clipboard=unnamedplus               " Set to your default clipboard
+set cmdheight=1                         " Change command height
+set encoding=utf-8
+set hidden                              " Required to keep multiple buffers open multiple buffers
+set iskeyword+=-                      	" treat dash separated words as a word text object"
+set nocompatible
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set updatetime=100                      " Faster completion
+set smartindent                         " Makes indenting smart
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set clipboard=unnamedplus               " Set to your default clipboard
-
+set ttyfast                             " Make vim go faster 
+set updatetime=100                      " Faster completion
 " Appearance
 set cursorline                          " Enable highlighting of the current line
-set hidden                              " Required to keep multiple buffers open multiple buffers
+set guicursor=                          " Set the cursor to block always
 set nowrap                              " Display long lines as just one line
 set number relativenumber               " Relative line numbers
 set pumheight=10                        " Makes popup menu smaller
 set ruler              		            " Show the cursor position all the time
-set termguicolors                       " Required by colorizer                  
-set whichwrap+=<,>,[,],h,l
-
+set termguicolors                       " Required by colorizer and other themes
+set title                               " Change the window title
 "Searching
-set hlsearch                            " highlight matches
-set ignorecase                          " searches are case insensitive...
-set incsearch                           " incremental searching
-set smartcase                           " ... unless they contain at least one capital letter
-
-" Encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
-set ttyfast
-set iskeyword+=-                      	" treat dash separated words as a word text object"
-
-" Tabs. May be overridden by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
+set hlsearch                            " Highlight matches
+set incsearch                           " Allow vim to start searching before pressing enter
+set ignorecase                          " Searches are case insensitive
+set smartcase                           " Unless they contain at least one capital letter
+set path+=**                            " Search down into subfolders provides tab-completion for all file-related tasks
+set wildmenu                            " Display all matching files when we tab complete
+" Tabs
 set expandtab
+set shiftwidth=4
 set showtabline=2                       " Always show tabs
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-
-" Indentation
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
-
+set softtabstop=0
+set tabstop=4
 " Plugins
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
+
+" set formatoptions-=cro                  " Stop newline continution of comments
+" set conceallevel=0                      " So that I can see `` in markdown files
+" set whichwrap+=<,>,[,],h,l
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
