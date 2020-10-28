@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Themes    
     Plug 'vim-airline/vim-airline'          " Status line
     Plug 'morhetz/gruvbox'                  " Gruvbox color plugin
+    Plug 'joshdick/onedark.vim'             " Onedark theme
     Plug 'tomasiser/vim-code-dark'          " VsCode color plugin
   " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Coc
@@ -18,15 +19,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'               " Start Screen
     Plug 'sheerun/vim-polyglot'             " Better syntax highlighting
     Plug 'tpope/vim-commentary'             " Better Comments
-    Plug 'justinmk/vim-sneak'               " Move between lines faster
     Plug 'norcalli/nvim-colorizer.lua'      " Color for those hex
     Plug 'airblade/vim-gitgutter'           " GIT integration
     Plug 'tpope/vim-surround'
     Plug 'luochen1990/rainbow'              " Rainbow brackets
     Plug 'ryanoasis/vim-devicons'           " Cool Icons
     Plug 'psliwka/vim-smoothie'             " Smooth scroll
-    Plug 'AndrewRadev/tagalong.vim'         " HTML |Auto change tags
-    Plug 'alvan/vim-closetag'               " HTML | Closetags
+    Plug 'AndrewRadev/tagalong.vim'         " HTML | Auto change tags
     " Plug 'jiangmiao/auto-pairs'             " Auto pairs for '(' '[' '{'
 
 call plug#end()
