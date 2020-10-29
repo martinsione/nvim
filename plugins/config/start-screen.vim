@@ -11,10 +11,10 @@ let g:startify_session_dir = '~/.config/nvim/session'
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']                        },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-          \ { 'type': 'sessions',  'header': ['   Sessions']                     },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
+          \ { 'type': 'sessions',  'header': ['   Sessions']                     },
           \ ]
+          " \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 
 
 let g:startify_session_autoload = 1
@@ -36,7 +36,7 @@ let g:startify_bookmarks = [
             \ { 'n': '~/.config/nvim' },
             \ { 'x': '~/.xinitrc' },
             \ { 's': '~/.config/nvim/plugins/config/start-screen.vim' },
-            \ { 'w': '~/storage/programming/web/webmaster' },
+            \ { 'w': '~/storage/programming/webmaster' },
             \ ]
 
             " \ '~/.config/dwm',
