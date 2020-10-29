@@ -19,6 +19,7 @@ source $HOME/.config/nvim/plugins/config/coc.vim            " Call Coc
 source $HOME/.config/nvim/plugins/config/gitgutter.vim      " Call Gitgutter
 source $HOME/.config/nvim/plugins/config/rainbow.vim        " Call rainbow brackets
 source $HOME/.config/nvim/plugins/config/polyglot.vim       " Call rainbow brackets
+source $HOME/.config/nvim/plugins/config/netrw.vim          " Call netrw
 " Colorizer
 luafile $HOME/.config/nvim/plugins/lua/plug-colorizer.lua
 
@@ -26,4 +27,3 @@ luafile $HOME/.config/nvim/plugins/lua/plug-colorizer.lua
 " Themes
 " source $HOME/.config/nvim/plugins/themes/codedark.vim      " Vscode theme
 source $HOME/.config/nvim/plugins/themes/gruvbox.vim        " Gruvbox theme
-" source $HOME/.config/nvim/plugins/themes/onedark.vim        " Onedark theme

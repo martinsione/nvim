@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Themes    
     Plug 'vim-airline/vim-airline'          " Status line
     Plug 'morhetz/gruvbox'                  " Gruvbox color plugin
-    Plug 'joshdick/onedark.vim'             " Onedark theme
     Plug 'tomasiser/vim-code-dark'          " VsCode color plugin
   " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Coc
