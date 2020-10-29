@@ -9,29 +9,22 @@ let mapleader='\<Space>'
 vnoremap < <gv
 vnoremap > >gv
 
-" Clear search higlighting
-noremap s :noh<CR>
-
 " TAB in normal mode will move to next buffer SHIFT-TAB will go back
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
-" Move selected line/block of code | K move up / J move down
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
-
 " Save with Ctrl + S
 nnoremap <silent> <C-s> :w<CR>
 " Close a buffer with Ctrl + Q
-nnoremap <silent> <C-Q> :bd<CR>
+nnoremap <silent> <C-q> :bd<CR>
 " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Use alt + hjkl to resize windows
 nnoremap <silent> <M-j>    :resize -2<CR>
