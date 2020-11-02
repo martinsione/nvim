@@ -1,7 +1,26 @@
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro' " See line number
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro signcolumn=no' " See line number
 let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 0
 let g:netrw_browse_split = 0
-let g:netrw_winsize = 35
+let g:netrw_winsize = 30
 
-" nnoremap <space>f :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+"Toggle function
+let g:NetrwIsOpen=0
+
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent Lexplore
+    endif
+endfunction
+
+noremap <silent> <space>f :call ToggleNetrw()<CR>
