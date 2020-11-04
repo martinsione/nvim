@@ -1,9 +1,5 @@
-" Remap Esc key
-" nnoremap <silent> <C-c> <Esc>
-" inoremap ii <Esc>
-
 " Leader key
-let mapleader='\<Space>'
+let mapleader=' '
 
 " Better indenting
 vnoremap < <gv
