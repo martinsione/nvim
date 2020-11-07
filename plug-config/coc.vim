@@ -10,6 +10,7 @@
     \ 'coc-sh',
     \ 'coc-tabnine',
     \ 'coc-tsserver',
+    \ 'coc-phpls',
     \ 'coc-vimlsp',
     \ 'coc-yank',
     \ ]
