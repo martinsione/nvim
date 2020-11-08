@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""General"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""General""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable                           " Enable syntax highlighing
 set autoindent                          " Good auto indent
 set clipboard=unnamedplus               " Set to your default clipboard
@@ -13,7 +13,7 @@ set signcolumn=yes                      " Always show the signcolumn, otherwise 
 set smartindent                         " Makes indenting smart
 set splitbelow splitright               " Fixes splitting
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set updatetime=100                       " Default is set to 4000
+set updatetime=100                      " Default is set to 4000
 set ttyfast                             " Make vim go faster
 set formatoptions-=cro                  " Stop newline continution of comments
 
@@ -46,9 +46,9 @@ set title                               " Change the window title
 set t_Co=256
 set t_ut=
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""Plugins"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""Plugins""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -61,19 +61,23 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Coc
+  " FZF
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+  " Git
+    Plug 'airblade/vim-gitgutter'           " GIT integration
+    Plug 'tpope/vim-fugitive'               " Best plugin ever
   " General
-    Plug 'vim-airline/vim-airline'          " Status line
+    Plug 'AndrewRadev/tagalong.vim'         " Auto change HTML tags
+    Plug 'luochen1990/rainbow'              " Rainbow brackets
     Plug 'mhinz/vim-startify'               " Start Screen
+    Plug 'norcalli/nvim-colorizer.lua'      " Colorizer
+    Plug 'psliwka/vim-smoothie'             " Smooth scroll
+    Plug 'ryanoasis/vim-devicons'           " Cool Icons
     Plug 'sheerun/vim-polyglot'             " Better syntax highlighting
     Plug 'tpope/vim-commentary'             " Better Comments
-    Plug 'norcalli/nvim-colorizer.lua'      " Color for those hex
-    Plug 'airblade/vim-gitgutter'           " GIT integration
-    Plug 'tpope/vim-surround'
-    Plug 'luochen1990/rainbow'              " Rainbow brackets
-    Plug 'ryanoasis/vim-devicons'           " Cool Icons
-    Plug 'psliwka/vim-smoothie'             " Smooth scroll
-    Plug 'AndrewRadev/tagalong.vim'         " HTML | Auto change tags
-    " Plug 'jiangmiao/auto-pairs'             " Auto pairs for '(' '[' '{'
+    Plug 'tpope/vim-surround'               " Change sorrounding tags
+    Plug 'vim-airline/vim-airline'          " Status line
   " Themes
     Plug 'morhetz/gruvbox'                  " Gruvbox color plugin
     Plug 'tomasiser/vim-code-dark'          " VsCode color plugin
@@ -87,8 +91,23 @@ autocmd VimEnter *
   \| endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""Plug-Conf"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""Plug-Conf""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection='0'
+let g:gruvbox_termcolors=1
+let g:gruvbox_invert_tabline=1
+let g:gruvbox_sign_column = 'bg0'
+colorscheme gruvbox
+
+" Sources
+
+if !exists('g:vscode')
+  source $HOME/.config/nvim/vscode/settings.vim
+endif
+
 source $HOME/.config/nvim/plug-config/airline.vim        " Airline theme
 source $HOME/.config/nvim/plug-config/closetags.vim      " Call closetags
 source $HOME/.config/nvim/plug-config/coc.vim            " Call Coc
@@ -101,19 +120,10 @@ source $HOME/.config/nvim/plug-config/start-screen.vim   " Startify
 " Colorizer
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
-" Theme
-set background=dark
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection='0'
-let g:gruvbox_termcolors=1
-let g:gruvbox_invert_tabline=1
-let g:gruvbox_sign_column = 'bg0'
-colorscheme gruvbox
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""Keymappings"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""Keymappings""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader key
 let mapleader=' '
 
@@ -138,12 +148,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Use alt + hjkl to resize windows
-nnoremap <silent> <M-j>    :resize -2<CR>
-nnoremap <silent> <M-k>    :resize +2<CR>
-nnoremap <silent> <M-h>    :vertical resize -2<CR>
-nnoremap <silent> <M-l>    :vertical resize +2<CR>
-
 " Terminal window navigation
 tnoremap <C-h> <C-\><C-N><C-w>h
 tnoremap <C-j> <C-\><C-N><C-w>j
@@ -156,9 +160,9 @@ inoremap <C-l> <C-\><C-N><C-w>l
 tnoremap <Esc> <C-\><C-n>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""Autocmd"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""Autocmd""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd BufWritePre * %s/\s\+$//e       " Remove extra whitespace on save
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
