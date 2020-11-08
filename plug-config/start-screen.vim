@@ -30,6 +30,7 @@ let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'x': '~/.xinitrc' },
             \ { 's': '~/.config/nvim/plug-config/start-screen.vim' },
+            \ { 't': '~/.tmux.conf' },
             \ { 'w': '~/storage/programming/webmaster' },
             \ ]
 
