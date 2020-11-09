@@ -14,7 +14,7 @@ function! ToggleNetrw()
         let i = bufnr("$")
         while (i >= 1)
             if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
+                silent exe "bwipeout " . i
             endif
             let i-=1
         endwhile
@@ -26,4 +26,4 @@ function! ToggleNetrw()
     endif
 endfunction
 
-noremap <silent> <space>f :call ToggleNetrw()<CR>
+" noremap <silent> <space>e :call ToggleNetrw()<CR>
