@@ -9,11 +9,6 @@ vnoremap > >gv
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
-" Write and write and quit with leader + default keys
-nnoremap <leader>w  :w!<CR>
-nnoremap <leader>wq  :wq!<CR>
-" Close a buffer ith leader + bd
-nnoremap <leader>bd :bd<CR>
 " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -30,9 +25,6 @@ map <C-l> <C-w>l
 " Fzf
 nnoremap <leader>p :Files <CR>
 nnoremap <leader>gf :GFiles <CR>
-
-" File explorer
-nnoremap <space>e :CocCommand explorer<CR>
 
 " Terminal window navigation
 inoremap <C-h> <C-\><C-N><C-w>h

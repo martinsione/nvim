@@ -18,12 +18,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " General
     Plug 'AndrewRadev/tagalong.vim'         " Auto change HTML tags
     Plug 'luochen1990/rainbow'              " Rainbow brackets
+    Plug 'liuchengxu/vim-which-key'         " See what keys do
     Plug 'mhinz/vim-startify'               " Start Screen
     Plug 'norcalli/nvim-colorizer.lua'      " Colorizer
     Plug 'sheerun/vim-polyglot'             " Better syntax highlighting
     Plug 'tpope/vim-commentary'             " Better Comments
     Plug 'tpope/vim-surround'               " Change sorrounding tags
   " Appearance
+    Plug 'junegunn/goyo.vim'                " Zen mode
     Plug 'psliwka/vim-smoothie'             " Smooth scroll
     Plug 'ryanoasis/vim-devicons'           " Cool Icons
     Plug 'vim-airline/vim-airline'          " Status line
