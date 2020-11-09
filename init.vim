@@ -4,9 +4,9 @@ source $HOME/.config/nvim/general/plugins.vim
 source $HOME/.config/nvim/general/mappings.vim
 
 if exists('g:vscode')
-  " VS Code extension
   source $HOME/.config/nvim/vscode/settings.vim
   source $HOME/.config/nvim/plug-config/polyglot.vim
+  set timeoutlen=100 " So which key shows faster
 else
 
 "Theme
@@ -21,6 +21,7 @@ else
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/netrw.vim
   source $HOME/.config/nvim/plug-config/polyglot.vim
+  source $HOME/.config/nvim/plug-config/which-key.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
 endif
