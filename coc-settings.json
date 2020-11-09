@@ -1,14 +1,10 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "graphql",
     "html",
     "javascript",
     "json",
-    "markdown",
-    "python",
-    "php",
-    "yaml"
+    "php"
   ],
 
   // html
@@ -33,7 +29,7 @@
       "expand": true
     }
   ],
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit",
     "a": "addFile",
