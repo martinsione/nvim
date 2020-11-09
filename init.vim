@@ -1,7 +1,7 @@
 " General
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/mappings.vim
 source $HOME/.config/nvim/general/plugins.vim
+source $HOME/.config/nvim/general/mappings.vim
 
 if exists('g:vscode')
   " VS Code extension
@@ -18,6 +18,7 @@ else
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/coc.vim
   source $HOME/.config/nvim/plug-config/gitgutter.vim
+  source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/netrw.vim
   source $HOME/.config/nvim/plug-config/polyglot.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
