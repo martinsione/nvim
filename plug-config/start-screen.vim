@@ -26,12 +26,13 @@ function! StartifyEntryFormat()
 
 let g:startify_bookmarks = [
             \ { 'a': '~/.config/alacritty/alacritty.yml' },
-            \ { 'b': '~/.bashrc' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'x': '~/.xinitrc' },
             \ { 's': '~/.config/nvim/plug-config/start-screen.vim' },
-            \ { 't': '~/.tmux.conf' },
+            \ { 't': '~/.config/tmux/tmux.conf' },
             \ { 'w': '~/storage/programming/webmaster' },
+            \ { 'p': '~/.zprofile' },
+            \ { 'z': '~/.config/zsh/.zshrc' },
             \ ]
 
             " \ '~/.config/dwm',

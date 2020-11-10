@@ -35,7 +35,7 @@ set tabstop=4
 
 " Appearance
 set cursorline                          " Enable highlighting of the current line
-set guicursor=                          " Set the cursor to block always
+" set guicursor=                          " Set the cursor to block always
 set nowrap                              " Display long lines as just one line
 set number relativenumber               " Relative line numbers
 set pumheight=10                        " Makes popup menu smaller

@@ -16,6 +16,9 @@ inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
+" Save with Ctrl + S
+nnoremap <silent> <C-s> :w<CR>
+
 " Better window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
